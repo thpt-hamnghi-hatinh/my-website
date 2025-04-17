@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(images/bg-body-img.jpg);
+  background-repeat: no-repeat;             /* Không lặp lại ảnh */
+  background-size: cover;                   /* Phủ kín toàn bộ trang */
+  background-position: center;              /* Căn giữa ảnh nền */
+  background-attachment: fixed;             /* Giữ ảnh nền cố định khi cuộn */
+}
+
+.container {
+  width: 1050px;
+  margin: auto;
+}
+
+.container .header {
+  background-image: url(images/THPTHamNghi.gif);
+  height: 190px;
+  background-repeat: no-repeat;             /* không lặp lại ảnh */
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+/* Nav */
+nav {
+  background-color: #003f88;
+  position: sticky; /*giữ lại nav khi cuộn*/
+  top: 0;
+  z-index: 1000; /* Đảm bảo nav nằm trên các phần khác */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 11px 16px;
+  text-decoration: none;                    /* không có gạch chân */
+  font-weight: bold;
+  background-color: #003f88;
+}
+
+nav li:hover > a {
+  background-color: #0066cc;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  border: 1px solid #ccc;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav li ul li a {
+  display: block;
+  color: #000;
+  padding: 10px 16px;
+  background-color: #fff;
+  text-align: left;
+  text-decoration: none;                    /* không gạch chân liên kết */
+  font-weight: normal;
+}
+
+nav li ul li a:hover {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #d9534f;
+}
+/* end nav */
+
+marquee {
+  z-index: -1;
+  margin-bottom: -4px;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  min-height: 1260px;
+  background-color: white;
+}
+
+.content article {
+  width: 70%;
+  float: left;
+  margin-left: 20px;
+}
+
+.content aside {
+  width: 27%;
+  float: right;
+  margin-right: 20px;
+}
+
+.lichlv .widthR {
+  width: 100%;
+}
+
+.lichlv ul {
+  list-style: none;
+}
+
+.lichlv ul a {
+  display: block;
+  background-image: url(images/check.png);
+  background-size: 15px;
+  background-position: 10px center;
+  background-repeat: no-repeat;             /* không lặp lại ảnh */
+  padding: 5px 40px;
+  text-decoration: none;                    /* không có gạch chân */
+}
+
+/* ===== Aside custom ===== */
+aside {
+  background-color: #ffffff;
+}
+
+.header-aside {
+  background-color: #004a99;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.menu-wrapper {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 0 0 4px 4px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;/*Căn thẳng cột*/
+  gap: 5px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #1c03f9ed;
+  border-radius: 4px;
+  background-color: white;
+  font-weight: bold;
+  color: #004a99;
+  text-decoration: none;                    /* không gạch chân */
+}
+
+.menu-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.menu-item.active {
+  background-color: #2980b9;
+  color: white;
+}
+
+.menu-item:hover {
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+  transform: translateX(14px);              /* dịch sang phải */
+}
+
+.aside-content {
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 0 0 4px 4px;
+}
+
+.aside-content h2 {
+  background-color: #004a91;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+
+.aside-content img {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.video-card {
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 0 0 4px 4px;
+}
+
+.video-header {
+  background-color: #004a91;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 170px;
+  border: none;
+}
+
+.video-content {
+  padding: 10px;
+}
+
+.video-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.video-description {
+  color: gray;
+  font-size: 10px;
+}
+
+/* ===== Footer with Trống Đồng ===== */
+.footer {
+  clear: both;
+  background:
+    url('images/bg_footer_2.png') no-repeat center bottom,
+    url('images/bg_footer.png') repeat-x,
+    #11518f;
+  background-size: auto, auto 100%, auto;
+  color: #fff;
+  min-height: 165px;
+  overflow: hidden;
+  margin-top: 2px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.section-group {
+  max-width: 710px;
+  margin: 0 0 10px 0;
+}
+
+.section-title {
+  background: #004a92;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-bottom: 0px;
+}
+
+.news-container,
+.student-news-container,
+.schedule-container,
+.anniversary-container {
+  display: flex;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+.news-left {
+  width: 40%;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+  margin: 15px 0 15px 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.news-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0;
+  border: none;
+}
+
+.highlight-box {
+  background-color: #004a92;
+  color: white;
+  padding: 10px 12px;
+  margin-top: 0;
+  border-top: 1px solid #003366;
+}
+
+.highlight-box .main-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.highlight-box .date {
+  font-size: 13px;
+  margin-top: 5px;
+  color: #e0e0e0;
+}
+
+.news-right {
+  width: 60%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-left,
+.schedule-left,
+.anniversary-left {
+  width: 45%;
+  padding: 12px;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.news-item,
+.student-item,
+.schedule-item,
+.anniversary-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 8px;
+}
+
+.news-item img.icon,
+.student-item i,
+.schedule-item i,
+.anniversary-item i {
+  width: 60px;
+  height: auto;
+}
+
+.student-item i,
+.schedule-item i,
+.anniversary-item i {
+  font-style: normal;
+  color: #004a92;
+  font-weight: bold;
+}
+
+.news-item .text,
+.student-item .text,
+.schedule-item .text,
+.anniversary-item .text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.news-item:hover .text,
+.student-item:hover .text,
+.schedule-item:hover .text,
+.anniversary-item:hover .text {
+  text-decoration: underline;               /* có gạch chân */
+  cursor: pointer;
+}
+
+.student-right,
+.schedule-right,
+.anniversary-right {
+  width: 55%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;                   /* Sắp xếp theo chiều dọc */
+  gap: 15px;
+}
+
+.image-border-wrapper {
+  display: inline-block;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.image-border-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+.icon-doc::before {
+  content: "\1F4C4";/*icon*/
+  margin-right: 5px;
+}
+
+.news-item .text:hover,
+.student-item .text:hover,
+.schedule-item .text:hover,
+.anniversary-item .text:hover,
+.main-title:hover {
+  color: #007bff;
+  text-decoration: underline;               /* Gạch chân */
+  cursor: pointer;
+}
